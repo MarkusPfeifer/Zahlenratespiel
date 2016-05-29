@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="at.pfeifer.zahlenratespiel.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <AbsoluteLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/absoluteLayout">
+
+    </AbsoluteLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Erraten Sie eine Zahl in einem Bereich den Sie festlegen"
+        android:id="@+id/textViewBesch"
+        android:textSize="@dimen/abc_action_bar_content_inset_material"
+        android:layout_alignTop="@+id/absoluteLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schritte für optimale Lösung:"
+        android:id="@+id/textViewSchritte"
+        android:textSize="@dimen/abc_action_bar_content_inset_material"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Bereich"
+        android:id="@+id/textViewBereich"
+        android:layout_below="@+id/textViewBesch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Zahl"
+        android:id="@+id/textViewZahl"
+        android:layout_below="@+id/textViewBereich"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextBereich"
+        android:layout_alignBottom="@+id/textViewBereich"
+        android:layout_centerHorizontal="true"
+        android:inputType="number"
+        android:text="1000"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextNumber"
+        android:layout_alignBottom="@+id/textViewZahl"
+        android:layout_centerHorizontal="true"
+        android:inputType="number"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prüfen"
+        android:id="@+id/pruefBtn"
+        android:layout_below="@+id/textViewZahl"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp"
+        android:onClick="onClickPruefen"/>
+
+</RelativeLayout>

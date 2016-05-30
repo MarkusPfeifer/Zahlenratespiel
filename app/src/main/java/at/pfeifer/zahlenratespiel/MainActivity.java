@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
 
         verbSchritte = (int) (anzSchritte + 0.5);
 
-        String rndNumberoni = String.valueOf(rndNumb);
+        //String rndNumber = String.valueOf(rndNumb);
 
-        Toast.makeText(MainActivity.this,rndNumberoni, Toast.LENGTH_LONG).show();
+        //Toast.makeText(MainActivity.this,rndNumber, Toast.LENGTH_LONG).show();
 
         textViewSchritte.setText("Schritte für optimale Lösung: " + verbSchritte );
     }
